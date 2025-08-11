@@ -1,0 +1,108 @@
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(120deg, #1254be, #1254be);
+  color: #333;
+  min-height: 100vh;
+}
+
+/* Dashboard container updated to behave like others */
+.dashboard {
+  display: flex;
+  flex-direction: column;    /* stack content vertically */
+  align-items: center;       /* center horizontally */
+  justify-content: flex-start; /* start from top */
+  min-height: calc(100vh - 100px); /* full viewport height minus header */
+  margin-top: 20px;          /* spacing below fixed header */
+  padding: 30px;
+  background: linear-gradient(120deg, #1254be, #1254be);
+  box-sizing: border-box;
+}
+
+.card {
+  background: white;
+  padding: 25px;
+  border-radius: 15px;
+  box-shadow: 0px 4px 20px rgba(0,0,0,0.1);
+  max-width: 300px;
+  width: 100%;
+  text-align: center;
+}
+
+h1, h2 {
+  font-weight: 600;
+}
+
+p {
+  font-size: 1.1rem;
+  max-width: 600px;
+  line-height: 1.6;
+}
+
+button {
+  background: linear-gradient(45deg, #00c6ff, #0072ff);
+  color: white;
+  border: none;
+  padding: 12px 25px;
+  border-radius: 25px;
+  font-size: 1rem;
+  cursor: pointer;
+  margin: 10px 8px 0 8px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0px 8px 15px rgba(0, 114, 255, 0.3);
+}
+
+.progress-bar {
+  background: #ddd;
+  border-radius: 20px;
+  height: 8px;
+  width: 100%;
+  margin: 15px 0;
+}
+
+.progress {
+  background: linear-gradient(45deg, #00c6ff, #0072ff);
+  height: 8px;
+  border-radius: 20px;
+}
+
+.title-container {
+  width: 100%;
+  text-align: center;
+  padding: 20px 0;
+  position: fixed; /* fixed at top */
+  top: 0;
+  left: 0;
+  background: linear-gradient(120deg, #a1c4fd, #c2e9fb);
+  z-index: 1000;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.title-container h1 {
+  margin: 0;
+  font-weight: 700;
+  font-size: 2rem;
+  color: #333;
+}
+
+/* Push down main content so it doesn't hide under fixed header */
+main {
+  padding-top: 80px;
+}
+
+/* Common container for Home, Tracker, About */
+.container {
+  margin-top: 20px;          /* space below header */
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start; /* start from top */
+  min-height: calc(100vh - 100px); /* full viewport height minus header + margin */
+  text-align: center;
+  box-sizing: border-box;
+}
